@@ -6,14 +6,12 @@ from selenium.webdriver.support import expected_conditions as EC
 url = "https://demoqa.com/alerts"
 
 
-@pytest.mark.skip
 def test_simple_alert(browser):
     browser.get(url)
     browser.find_element(By.ID, "alertButton").click()
     browser.switch_to.alert.accept()
 
 
-@pytest.mark.skip
 def test_alert_with_delay(browser):
     browser.get(url)
     browser.find_element(By.ID, "timerAlertButton").click()
